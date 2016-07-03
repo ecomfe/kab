@@ -26,6 +26,8 @@ KAB 是源于 edp-test 的前端测试工具。
     $ kab start --help
 ```
 
+更多参数见 wiki: [CLI](https://github.com/ecomfe/kab/wiki/CLI)
+
 ### API
 
 #### kab.leadName
@@ -57,3 +59,11 @@ console.log(options.command); // 'start'
 #### kab.start(Object options)
 
 开始测试。
+
+### 常见问题
+
+- <https://github.com/ecomfe/kab/wiki/FAQ>
+
+更多信息请访问 <https://github.com/ecomfe/kab/wiki>
+
+
