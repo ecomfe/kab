@@ -26,3 +26,34 @@ KAB 是源于 edp-test 的前端测试工具。
     $ kab start --help
 ```
 
+### API
+
+#### kab.leadName
+
+设置或获取控制台输出信息前的名称，默认值为 `kab`。
+
+```javascript
+var kab = require('kab');
+kab.leadName = 'edp';
+...
+```
+
+#### kab.getOptions([Array argv])
+
+获取经 `minimist` 解释后的命令行参数对象，可用于 `kab.init` 和 `kab.start` 方法。
+
+```javascript
+var options = kab.getOptions(process.argv.slice(2));
+
+console.log(options.command); // 'start'
+...
+```
+
+#### kab.init(Object options)
+
+初始化配置文件。
+
+
+#### kab.start(Object options)
+
+开始测试。
