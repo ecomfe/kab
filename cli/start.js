@@ -130,7 +130,7 @@ function start(config, emitter, server, args) {
     }
 
     var webserver = startServer(config, server);
-    var browsers = require('../lib/browsers').init();
+    var browsers = require('../lib/browsers').init(config);
 
     var exit = function (code) {
         process.exit(code === 1 ? 1 : 0);
