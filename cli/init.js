@@ -87,10 +87,9 @@ function init(override) {
 /**
  * 运行初始化
  *
- * @param {Array} args 命令运行参数
  * @param {Object} opts 命令选项
  */
-exports.run = function (args, opts) {
+exports.run = function (opts) {
 
     if (!opts.hasConfig || opts.force) {
         init();

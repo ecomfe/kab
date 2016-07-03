@@ -173,10 +173,11 @@ function start(config, emitter, server, args) {
 /**
  * 启动测试服务
  *
- * @param {Array} args 命令运行参数
  * @param {Object} opts 命令行选项参数对象
  */
-exports.run = function (args, opts) {
+exports.run = function (opts) {
+    var args = opts._;
+
     if (!opts.hasConfig && !opts.node) {
         require('./init').run(args, opts);
     }
