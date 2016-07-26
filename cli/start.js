@@ -198,7 +198,7 @@ exports.run = function (opts) {
     var server = require('../lib/server');
 
     if (args.length) {
-        if (!server.bench(emitter, args)) {
+        if (!server.bench(emitter, args, opts)) {
             log.error('Error.');
             return;
         }
