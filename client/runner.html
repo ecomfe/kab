@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>edp test runner - using jasmine</title>
+<title>kab runner - using jasmine</title>
 <script src="socket.io/socket.io.js"></script>
 <style>
     iframe {
@@ -95,7 +95,7 @@
 <body>
 <div id="banner" class="online">
     <a href="debug.html" target="_blank" class="btn-debug">DEBUG</a>
-    <h1 id="title">edp test - starting</h1>
+    <h1 id="title">kab - starting</h1>
 </div>
 <ul id="browsers"></ul>
 <iframe id="context" src="about:blank"></iframe>
@@ -122,7 +122,7 @@
 
     var start = function () {
         document.getElementById('banner').className = 'online';
-        document.getElementById('title').innerHTML = 'edp test - running';
+        document.getElementById('title').innerHTML = 'kab - running';
         socket.emit('registerBrowser', {fullName: navigator.userAgent, id: id});
     };
 
@@ -146,7 +146,7 @@
     socket.on('disconnect', function () {
         // console.log('断开连接');
         document.getElementById('banner').className = 'offline';
-        document.getElementById('title').innerHTML = 'edp test - closed';
+        document.getElementById('title').innerHTML = 'kab - closed';
     });
 
     socket.on('reconnect', function () {
@@ -155,7 +155,7 @@
     });
 
     socket.on('idle', function () {
-        document.getElementById('title').innerHTML = 'edp test - idle';
+        document.getElementById('title').innerHTML = 'kab - idle';
     });
 
     socket.on('reload', function (path) {

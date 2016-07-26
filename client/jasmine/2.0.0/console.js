@@ -13,7 +13,7 @@
             // remove jasmine stack entries
             return stack
                 .replace(/\?[^:]+/g, '')
-                .replace(/\n.+\/.edp-test\/.+\.js:.+(?=(\n|$))/g, '')
+                .replace(/\n.+\/.kab\/.+\.js:.+(?=(\n|$))/g, '')
                 .replace(/\n.+\/(context\.html)?\:.+(?=(\n|$))/g, '');
         }
 
