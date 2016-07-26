@@ -81,14 +81,14 @@ function startServer(config, server) {
         };
 
         locations.forEach(function (item, i) {
-            if (item.key === sourceKey || String(item.location) === String(sourceLocation.location)) {
+            var isBabel = (item.key || '').slice(sourceKey.length + 1) === 'babel';
+            if (isBabel
+                || item.key === sourceKey
+                || String(item.location) === String(sourceLocation.location)
+            ) {
                 hasSource = true;
-                if (Array.isArray(item.handler)) {
-                    item.handler.push(sourceLocation.handler);
-                }
-                else {
-                    item.handler = [item.handler, sourceLocation.handler];
-                }
+                item.handler = Array.isArray(item.handler) ? item.handler : [item.handler];
+                item.handler.splice(item.handler.length - (isBabel ? 2 : 1), 0, sourceLocation.handler);
             }
         });
 
