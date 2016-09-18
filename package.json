@@ -1,6 +1,6 @@
 {
   "name": "kab",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Know About Better - test your code",
   "main": "index.js",
   "scripts": {
