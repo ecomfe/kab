@@ -7,7 +7,9 @@
     "lint": "fecs --type=js --rule",
     "coverage": "babel-istanbul cover ./node_modules/jasmine-node/bin/jasmine-node --captureExceptions test/",
     "test": "npm run lint && npm run coverage",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "kab": "./bin/kab"
@@ -58,13 +60,15 @@
     "msee": "^0.3.1",
     "platform": "^1.3.1",
     "qransi": "0.0.2",
-    "socket.io": "^1.4.8",
-    "socket.io-client": "^1.4.8",
+    "socket.io": "^2.0.0",
+    "socket.io-client": "^2.0.0",
     "source-map-closest-match": "^0.1.1",
-    "useragent": "^2.1.9"
+    "useragent": "^2.1.9",
+    "snyk": "^1.30.1"
   },
   "devDependencies": {
     "fecs": "latest",
     "coveralls": "^2.11.8"
-  }
+  },
+  "snyk": true
 }
