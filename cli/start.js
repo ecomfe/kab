@@ -88,7 +88,12 @@ function startServer(config, server) {
             ) {
                 hasSource = true;
                 item.handler = Array.isArray(item.handler) ? item.handler : [item.handler];
-                item.handler.splice(item.handler.length - (isBabel ? 2 : 1), 0, sourceLocation.handler);
+                if (isBabel) {
+                    item.handler.splice(item.handler.length - 2, 0, sourceLocation.handler);
+                }
+                else {
+                    item.handler.push(sourceLocation.handler);
+                }
             }
         });
 
