@@ -130,12 +130,12 @@
     timer: new jasmine.Timer()
   });
 
-  env.addReporter(htmlReporter);
+  // env.addReporter(htmlReporter);
 
   /**
    * The `jsApiReporter` also receives spec results, and is used by any environment that needs to extract the results  from JavaScript.
    */
-  // env.addReporter(jasmineInterface.jsApiReporter);
+  env.addReporter(jasmineInterface.jsApiReporter);
   // env.addReporter(htmlReporter);
 
   /**
